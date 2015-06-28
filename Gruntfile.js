@@ -56,7 +56,7 @@ module.exports = function (grunt) {
                         expand: true,
                         src: ['src/app/**/*.html'],
                         dest: 'compile/partials/'
-                    },
+                    }
                 ]
             }
         },
