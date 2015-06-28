@@ -1,0 +1,9 @@
+{
+  "name": "toywheel_admin",
+  "dependencies": {
+    "angular-route": "~1.3.*",
+    "angular-resource": "~1.3.*",
+    "angular-mocks": "~1.3.*",
+    "html5-boilerplate": "*"
+  }
+}
