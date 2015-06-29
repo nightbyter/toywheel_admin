@@ -32,8 +32,6 @@ module.exports = function (grunt) {
             common: {
                 files: {
                     'compile/css/common.min.css': [
-                        'bower_components/html5-boilerplate/dist/css/normalize.css',
-                        'bower_components/html5-boilerplate/dist/css/main.css',
                         'src/app/common/**/*.css'
                     ],
                     'compile/css/startScreen.min.css': [
