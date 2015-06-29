@@ -2,7 +2,7 @@
 <html lang="en" ng-app="toywheel_admin">
 <head>
     <base href="/"/>
-    <title>Toywheel Panel</title>
+    <title ng-bind="::localization.administration_panel"></title>
     <meta charset='UTF-8'>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="initial-scale=1"/>
@@ -12,6 +12,31 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
 </head>
 <body>
+<div class="navbar" layout="row">
+    <a class="logo" href="http://gamewheel.co"></a>
+
+    <div layout="column" flex="1" layout-align="center end">
+        <md-menu>
+            <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu()">
+                User
+            </md-button>
+            <md-menu-content width="2">
+                <md-menu-item>
+                    <md-button><span>Profile</span></md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button><span>Settings</span></md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button><span>Help</span></md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button><span>Log out</span></md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </div>
+</div>
 <div class="view-container clearfix" ng-view></div>
 <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js'></script>
 <script src='js/common.min.js'></script>

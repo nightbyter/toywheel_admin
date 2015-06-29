@@ -1,6 +1,7 @@
 var toywheel_admin = angular.module('toywheel_admin', [
     'ngRoute',
-    'ngResource'
+    'ngResource',
+    'ngMaterial'
 ]);
 
 toywheel_admin.config(['$routeProvider',
