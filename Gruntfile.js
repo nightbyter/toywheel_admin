@@ -56,6 +56,12 @@ module.exports = function (grunt) {
                         expand: true,
                         src: ['src/app/**/*.html'],
                         dest: 'compile/partials/'
+                    },
+                    {
+                        flatten: true,
+                        expand: true,
+                        src: ['src/app/i18n/*.json'],
+                        dest: 'compile/i18n/'
                     }
                 ]
             }

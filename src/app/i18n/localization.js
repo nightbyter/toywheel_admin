@@ -4,6 +4,6 @@ toywheel_admin.service("LocalizationService", ["$http", "$rootScope", function (
         var url = "/i18n/" + lang + ".json";
         $http.get(url).success(function (localization) {
             $rootScope.localization = localization;
-        })
+        });
     }
-}]);
+}])
