@@ -34,7 +34,13 @@ module.exports = function (grunt) {
                     'compile/css/common.min.css': [
                         'bower_components/html5-boilerplate/dist/css/normalize.css',
                         'bower_components/html5-boilerplate/dist/css/main.css',
-                        'src/app/**/*.css'
+                        'src/app/common/**/*.css'
+                    ],
+                    'compile/css/startScreen.min.css': [
+                        'src/app/startScreen/css/startScreen.css'
+                    ],
+                    'compile/css/gameBuilder.min.css': [
+                        'src/app/gameBuilder/css/gameBuilder.css'
                     ]
                 }
             }
