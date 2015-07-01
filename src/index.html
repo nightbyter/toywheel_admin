@@ -6,38 +6,47 @@
     <meta charset='UTF-8'>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="initial-scale=1"/>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+    <link rel="stylesheet"
+          href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
     <link href='favicon.ico' rel='shortcut icon' type='image/x-icon'/>
     <link href='css/common.min.css' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
 </head>
-<body>
-<div class="navbar" layout="row">
+<body flex layout="column">
+<md-toolbar layout="row" class="md-default-theme">
     <a class="logo" href="http://gamewheel.co"></a>
+    <md-menu class="username" md-offset="0 50">
+        <md-button class="md-icon-button md-button md-default-theme" ng-transclude="" aria-label="Open demo menu"
+                   ng-click="$mdOpenMenu()" aria-haspopup="true" tabindex="0" aria-expanded="false">
+            User
+        </md-button>
+        <md-menu-content width="2">
+            <md-menu-item>
+                <md-button>
+                    <span>Profile</span>
+                </md-button>
+            </md-menu-item>
+            <md-menu-item>
+                <md-button>
+                    <span>Settings</span>
+                </md-button>
+            </md-menu-item>
+            <md-menu-item>
+                <md-button>
+                    <span>Help</span>
+                </md-button>
+            </md-menu-item>
+            <md-menu-item>
+                <md-button>
+                    <span>Logout</span>
+                </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+</md-toolbar>
 
-    <div layout="column" flex="1" layout-align="center end">
-        <md-menu>
-            <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu()">
-                User
-            </md-button>
-            <md-menu-content width="2">
-                <md-menu-item>
-                    <md-button><span>Profile</span></md-button>
-                </md-menu-item>
-                <md-menu-item>
-                    <md-button><span>Settings</span></md-button>
-                </md-menu-item>
-                <md-menu-item>
-                    <md-button><span>Help</span></md-button>
-                </md-menu-item>
-                <md-menu-item>
-                    <md-button><span>Log out</span></md-button>
-                </md-menu-item>
-            </md-menu-content>
-        </md-menu>
-    </div>
-</div>
-<div class="view-container clearfix" ng-view></div>
+<div class="view-container clearfix" flex ng-view layout="row"></div>
+
 <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js'></script>
 <script src='js/common.min.js'></script>
 <script>
